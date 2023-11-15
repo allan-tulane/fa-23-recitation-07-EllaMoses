@@ -1,4 +1,4 @@
-from main_sol import *
+from main import *
 
 def test_reachable():
     graph = make_undirected_graph([('A', 'B'), ('B', 'C'), ('C', 'D'), ('D', 'B')])
@@ -7,6 +7,7 @@ def test_reachable():
     graph = make_undirected_graph([('A', 'B'), ('B', 'C'), ('C', 'D'), ('D', 'B'), ('E', 'F'), ('F', 'G')])
     assert sorted(reachable(graph, 'A')) == ['A', 'B', 'C', 'D']
     assert sorted(reachable(graph, 'E')) == ['E', 'F', 'G']
+
 
 def test_connected():
     graph = make_undirected_graph([('A', 'B'), ('B', 'C'), ('C', 'D'), ('D', 'B')])
@@ -20,3 +21,7 @@ def test_n_components():
 
     graph = make_undirected_graph([('A', 'B'), ('B', 'C'), ('C', 'D'), ('D', 'B'), ('E', 'F'), ('F', 'G')])
     assert n_components(graph) == 2
+
+    # additional test cases: 
+    graph = make_undirected_graph([('A', 'B'), ('B', 'C'), ('C', 'D'), ('D', 'B'), ('E', 'F'), ('F', 'G'), ('X', 'Y'), ('Y', 'Z')])
+    assert n_components(graph) == 3
