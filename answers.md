@@ -10,8 +10,8 @@ Place all written answers from `recitation-07.md` here for easier grading.
 
 - **2)**
 
-The work is equal to the number of nodes times the number of edges. 
-W(n) = O(nm)
+The work is equal to the number of nodes plus the number of edges. 
+W(n) = O(n+m)
 
 - **4)**
 
@@ -19,10 +19,10 @@ Once. If all nodes are reachable by the first node, then the graph is connected 
 
 - **5)**
 
-The work of connected is equal to the work of reachable since their is only one call to reachable.
+The work of connected is equal to the work of reachable since their is one call to reachable.
 
-W(n) = O(nm)
+W(n) = O(n+m)
 
 - **7)**
 
-If we switched to an adjacency matrix, the work is still equal to O(n^2). This is because for each node you must check each of the other nodes to see if there is a connection. 
+If we switched to an adjacency matrix, the work is equal to O(n^2). This is because for each node you must check each of the other nodes to see if there is a connection. 
